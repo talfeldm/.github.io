@@ -49,28 +49,6 @@
             animation: fadeIn 1s ease-out forwards;
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .header-photo {
-            flex-shrink: 0;
-        }
-
-        .header-photo img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 2px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-text {
-            flex: 1;
-        }
-
         h1 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 4.5rem;
@@ -113,6 +91,32 @@
             animation: fadeIn 1s ease-out 0.3s forwards;
         }
 
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .about-photo {
+            flex-shrink: 0;
+        }
+
+        .about-photo img {
+            width: 280px;
+            height: auto;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
         .section-label {
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -120,13 +124,6 @@
             color: var(--accent);
             font-weight: 600;
             margin-bottom: 2rem;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            max-width: 700px;
         }
 
         .about-text p {
@@ -180,6 +177,7 @@
         .pub-item:nth-child(8) { animation-delay: 1.5s; }
         .pub-item:nth-child(9) { animation-delay: 1.6s; }
         .pub-item:nth-child(10) { animation-delay: 1.7s; }
+        .pub-item:nth-child(11) { animation-delay: 1.8s; }
 
         .pub-item:last-child {
             border-bottom: none;
@@ -330,19 +328,18 @@
                 padding: 4rem 0 3rem;
             }
 
-            .header-content {
-                flex-direction: column;
+            .about-content {
+                flex-direction: column-reverse;
                 gap: 2rem;
+            }
+
+            .about-photo {
+                width: 100%;
                 text-align: center;
             }
 
-            .header-photo img {
-                width: 160px;
-                height: 160px;
-            }
-
-            .subtitle {
-                max-width: 100%;
+            .about-photo img {
+                width: 200px;
             }
 
             .about,
@@ -396,9 +393,8 @@
                 font-size: 1rem;
             }
 
-            .header-photo img {
-                width: 140px;
-                height: 140px;
+            .about-photo img {
+                width: 180px;
             }
         }
     </style>
@@ -411,30 +407,28 @@
     
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="header-photo">
-                    <img src="Feldman1.jpg" alt="Tal Feldman">
-                </div>
-                <div class="header-text">
-                    <h1>Tal Feldman</h1>
-                    <p class="subtitle">AI, Law, and National Security</p>
-                    <a href="https://www.linkedin.com/in/talfeldman/" target="_blank" rel="noopener" class="header-link">LinkedIn →</a>
-                </div>
-            </div>
+            <h1>Tal Feldman</h1>
+            <p class="subtitle">AI, Law, and National Security</p>
+            <a href="https://www.linkedin.com/in/talfeldman/" target="_blank" rel="noopener" class="header-link">LinkedIn →</a>
         </div>
     </header>
 
     <section class="about" id="about">
         <div class="container">
             <div class="section-label">About</div>
-            <div class="about-text">
-                <p>I am a JD candidate at Yale Law School focused on artificial intelligence and national security. My work spans both technical AI research and policy analysis.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a JD candidate at Yale Law School focused on artificial intelligence and national security. My work spans both technical AI research and policy analysis.</p>
 
-                <p>Before law school, I worked as an AI engineer across multiple U.S. federal agencies. I led teams building AI tools for bureaucratic processes at the Department of State, developed machine learning models at the Federal Reserve, advised the U.S. Embassy in London on AI-related issues, and built quantitative tools at the Department of Defense.</p>
+                    <p>Before law school, I worked as an AI engineer across multiple U.S. federal agencies. I led teams building AI tools for bureaucratic processes at the Department of State, developed machine learning models at the Federal Reserve, advised the U.S. Embassy in London on AI-related issues, and built quantitative tools at the Department of Defense.</p>
 
-                <p>I earned a Master of Global Affairs from Tsinghua University's Schwarzman College, where I focused on AI and industrial policy. I received my bachelor's degree in mathematics and economics from Wake Forest University, graduating summa cum laude as a Stamps Scholar and Phi Beta Kappa. At Yale, I am an editor at the <i>Yale Law Journal</i> and co-president of the Jewish Law Students Association.</p>
+                    <p>I earned a Master of Global Affairs from Tsinghua University's Schwarzman College, where I focused on AI and industrial policy. I received my bachelor's degree in mathematics and economics from Wake Forest University, graduating summa cum laude as a Stamps Scholar and Phi Beta Kappa. At Yale, I am an editor at the <i>Yale Law Journal</i> and co-president of the Jewish Law Students Association.</p>
 
-                <p>My writing has appeared in <i>Foreign Policy</i>, <i>The Washington Post</i>, <i>MIT Technology Review</i>, <i>Lawfare</i>, and <i>Just Security</i>, among other outlets.</p>
+                    <p>My writing has appeared in <i>Foreign Policy</i>, <i>The Washington Post</i>, <i>MIT Technology Review</i>, <i>Lawfare</i>, and <i>Just Security</i>, among other outlets.</p>
+                </div>
+                <div class="about-photo">
+                    <img src="Feldman1.jpg" alt="Tal Feldman">
+                </div>
             </div>
         </div>
     </section>
@@ -443,7 +437,7 @@
         <div class="container">
             <div class="section-label">Selected Publications</div>
             
-            <h2 class="pub-category">Policy & Commentary</h2>
+            <h2 class="pub-category">Long-Form Analysis</h2>
             <ul class="pub-list">
                 <li class="pub-item">
                     <a href="https://www.technologyreview.com/2025/12/05/1128837/the-era-of-ai-persuasion-in-elections-is-about-to-begin/" target="_blank" rel="noopener">
@@ -462,6 +456,23 @@
                 </li>
 
                 <li class="pub-item">
+                    <a href="https://www.justsecurity.org/112926/law-supports-ai-government-rag-shows-way/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">The Law Already Supports AI in Government — RAG Shows the Way</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Just Security</span>, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.yalejreg.com/nc/schrodingers-executive-order-could-executive-made-intelligence-law-be-secretly-rescinded-by-tal-feldman/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Schrödinger's Executive Order: Could Executive-Made Intelligence Law Be Secretly Rescinded?</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Yale Journal on Regulation Notice & Comment</span>, <span class="pub-year">2025</span></p>
+                </li>
+            </ul>
+
+            <h2 class="pub-category">Op-Eds</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
                     <a href="https://www.washingtonpost.com/opinions/2025/01/XX/ai-created-working-virus/" target="_blank" rel="noopener">
                         <h3 class="pub-title">AI Just Created a Working Virus. The U.S. Isn't Prepared for That.</h3>
                     </a>
@@ -475,13 +486,6 @@
                     </a>
                     <p class="pub-authors">with Michele Flournoy</p>
                     <p class="pub-venue"><span class="pub-venue-name">Foreign Policy</span>, <span class="pub-year">2025</span></p>
-                </li>
-
-                <li class="pub-item">
-                    <a href="https://www.justsecurity.org/112926/law-supports-ai-government-rag-shows-way/" target="_blank" rel="noopener">
-                        <h3 class="pub-title">The Law Already Supports AI in Government — RAG Shows the Way</h3>
-                    </a>
-                    <p class="pub-venue"><span class="pub-venue-name">Just Security</span>, <span class="pub-year">2025</span></p>
                 </li>
             </ul>
 
@@ -508,13 +512,6 @@
                         <h3 class="pub-title">When Intelligence Law Gets Artificial Intelligence Wrong</h3>
                     </div>
                     <p class="pub-venue"><span class="pub-venue-name">Georgetown Journal of National Security Law and Policy</span>, <span class="pub-year">forthcoming 2026</span></p>
-                </li>
-
-                <li class="pub-item">
-                    <a href="https://www.yalejreg.com/nc/schrodingers-executive-order-could-executive-made-intelligence-law-be-secretly-rescinded-by-tal-feldman/" target="_blank" rel="noopener">
-                        <h3 class="pub-title">Schrödinger's Executive Order: Could Executive-Made Intelligence Law Be Secretly Rescinded?</h3>
-                    </a>
-                    <p class="pub-venue"><span class="pub-venue-name">Yale Journal on Regulation Notice & Comment</span>, <span class="pub-year">2025</span></p>
                 </li>
 
                 <li class="pub-item">
