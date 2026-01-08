@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Publications — Tal Feldman</title>
+    <meta name="title" content="Publications — Tal Feldman">
+    <meta name="description" content="Selected publications by Tal Feldman on AI policy, national security, and law. Writing in Foreign Policy, Washington Post, MIT Technology Review, Lawfare, and academic research in AI biosecurity.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tal Feldman">
+    <meta name="keywords" content="Tal Feldman publications, AI policy research, national security writing, AI biosecurity, machine learning research">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://talxfeldman.com/publications.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://talxfeldman.com/publications.html">
+    <meta property="og:title" content="Publications — Tal Feldman">
+    <meta property="og:description" content="Selected publications by Tal Feldman on AI policy, national security, and law.">
+    <meta property="og:image" content="https://talxfeldman.com/Feldman1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://talxfeldman.com/publications.html">
+    <meta property="twitter:title" content="Publications — Tal Feldman">
+    <meta property="twitter:description" content="Selected publications by Tal Feldman on AI policy, national security, and law.">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --secondary-dark: #2d2d2d;
+            --text-primary: #0a0a0a;
+            --text-secondary: #4a4a4a;
+            --accent: #8b4513;
+            --accent-light: #b8651f;
+            --border-subtle: #e5e5e5;
+            --bg-subtle: #fafafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 5rem 0 3rem;
+            border-bottom: 1px solid var(--border-subtle);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            line-height: 1.1;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Publications Section */
+        .publications {
+            padding: 5rem 0 6rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+        }
+
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-category {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .pub-category:first-of-type {
+            margin-top: 0;
+        }
+
+        .pub-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+
+        .pub-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        .pub-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .pub-item a:hover .pub-title {
+            color: var(--accent-light);
+        }
+
+        .pub-venue {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-venue-name {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .pub-year {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-subtle);
+            background: var(--bg-subtle);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .contact {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skip Navigation */
+        .skip-nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 2px;
+            padding: 0.75rem 1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+
+        .skip-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+
+        .skip-nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            header {
+                padding: 3rem 0 2rem;
+            }
+
+            .publications {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pub-title {
+                font-size: 1.3rem;
+            }
+
+            .pub-category {
+                font-size: 1.5rem;
+            }
+
+            .skip-nav {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .skip-nav a {
+                font-size: 0.8rem;
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="skip-nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>Publications</h1>
+        </div>
+    </header>
+
+    <section class="publications">
+        <div class="container">
+            <h2 class="pub-category">Long-Form Analysis</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <a href="https://www.technologyreview.com/2025/12/05/1128837/the-era-of-ai-persuasion-in-elections-is-about-to-begin/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">The Era of AI Persuasion in Elections Is About to Begin</h3>
+                    </a>
+                    <p class="pub-authors">with Aneesh Pappu</p>
+                    <p class="pub-venue"><span class="pub-venue-name">MIT Technology Review</span>, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.lawfaremedia.org/article/technical-standards--america-s-forgotten-tool-of-statecraft" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Technical Standards: America's Forgotten Tool of Statecraft</h3>
+                    </a>
+                    <p class="pub-authors">with Laura Galante</p>
+                    <p class="pub-venue"><span class="pub-venue-name">Lawfare</span>, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.justsecurity.org/112926/law-supports-ai-government-rag-shows-way/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">The Law Already Supports AI in Government — RAG Shows the Way</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Just Security</span>, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.yalejreg.com/nc/schrodingers-executive-order-could-executive-made-intelligence-law-be-secretly-rescinded-by-tal-feldman/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Schrödinger's Executive Order: Could Executive-Made Intelligence Law Be Secretly Rescinded?</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Yale Journal on Regulation Notice & Comment</span>, <span class="pub-year">2025</span></p>
+                </li>
+            </ul>
+
+            <h2 class="pub-category">Op-Eds</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <a href="https://www.washingtonpost.com/opinions/2025/09/25/artificial-intelligence-advance-virus-created/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">AI Just Created a Working Virus. The U.S. Isn't Prepared for That.</h3>
+                    </a>
+                    <p class="pub-authors">with Jonathan Feldman</p>
+                    <p class="pub-venue"><span class="pub-venue-name">The Washington Post</span>, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://foreignpolicy.com/2025/07/18/manufacturing-tariffs-artificial-intelligence-innovation-trump/" target="_blank" rel="noopener">
+                        <h3 class="pub-title">The United States Can't Have a Manufacturing Renaissance Without Innovation</h3>
+                    </a>
+                    <p class="pub-authors">with Michele Flournoy</p>
+                    <p class="pub-venue"><span class="pub-venue-name">Foreign Policy</span>, <span class="pub-year">2025</span></p>
+                </li>
+            </ul>
+
+            <h2 class="pub-category">Academic Research</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <a href="https://openreview.net/pdf?id=9Nhrk0Cuk0" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Restricted Release of Advanced Biological Models</h3>
+                    </a>
+                    <p class="pub-authors">with Jonathan Feldman</p>
+                    <p class="pub-venue">NeurIPS Workshop (Oral; Best Position Award), <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://openreview.net/pdf?id=NAr5wbHghS" target="_blank" rel="noopener">
+                        <h3 class="pub-title">AI Bioweapons and the Failure of Inference-Time Filters</h3>
+                    </a>
+                    <p class="pub-authors">with Jonathan Feldman</p>
+                    <p class="pub-venue">NeurIPS Workshop, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <div>
+                        <h3 class="pub-title">When Intelligence Law Gets Artificial Intelligence Wrong</h3>
+                    </div>
+                    <p class="pub-venue"><span class="pub-venue-name">Georgetown Journal of National Security Law and Policy</span>, <span class="pub-year">forthcoming 2026</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://arxiv.org/abs/2509.02610" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Resilient Biosecurity in the Era of AI-Enabled Bioweapons</h3>
+                    </a>
+                    <p class="pub-authors">with Jonathan Feldman</p>
+                    <p class="pub-venue">arXiv, <span class="pub-year">2025</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://ojs.stanford.edu/ojs/index.php/intersect/article/view/2013" target="_blank" rel="noopener">
+                        <h3 class="pub-title">Behind the COVID Curtain: Analyzing Russia's COVID-19 Response on Twitter Using Natural Language Processing and Deep Learning</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Intersect: The Stanford Journal of Science, Technology, and Society</span>, <span class="pub-year">2021</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://arxiv.org/abs/2104.02532" target="_blank" rel="noopener">
+                        <h3 class="pub-title">End-To-End Bias Mitigation: Removing Gender Bias in Deep Learning</h3>
+                    </a>
+                    <p class="pub-authors">with Ashley Peake</p>
+                    <p class="pub-venue">arXiv, <span class="pub-year">2021</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact">
+                    © 2026 Tal Feldman
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
