@@ -162,9 +162,17 @@
             margin-bottom: 0.25rem;
         }
 
-        .pub-authors a {
-            color: var(--accent);
-            border-bottom: 1px solid var(--accent);
+        .pub-authors a,
+        .pub-authors a:visited,
+        .pub-authors a:hover,
+        .pub-authors a:focus,
+        .pub-authors a:active {
+            color: inherit;
+            font: inherit;
+            text-decoration: none;
+            border: none;
+            background: none;
+            cursor: text;
         }
 
         .pub-venue-name {
