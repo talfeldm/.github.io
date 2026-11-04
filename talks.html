@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Talks — Tal Feldman</title>
+    <meta name="title" content="Talks — Tal Feldman">
+    <meta name="description" content="Talks and guest lectures by Tal Feldman on AI and national security.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tal Feldman">
+    <meta name="keywords" content="Tal Feldman talks, guest lectures, AI and national security">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://talxfeldman.com/talks.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://talxfeldman.com/talks.html">
+    <meta property="og:title" content="Talks — Tal Feldman">
+    <meta property="og:description" content="Talks and guest lectures by Tal Feldman on AI and national security.">
+    <meta property="og:image" content="https://talxfeldman.com/Feldman1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://talxfeldman.com/talks.html">
+    <meta property="twitter:title" content="Talks — Tal Feldman">
+    <meta property="twitter:description" content="Talks and guest lectures by Tal Feldman on AI and national security.">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --secondary-dark: #2d2d2d;
+            --text-primary: #0a0a0a;
+            --text-secondary: #4a4a4a;
+            --accent: #8b4513;
+            --accent-light: #b8651f;
+            --border-subtle: #e5e5e5;
+            --bg-subtle: #fafafa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 5rem 0 3rem;
+            border-bottom: 1px solid var(--border-subtle);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            line-height: 1.1;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Talks list */
+        .publications {
+            padding: 5rem 0 6rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+        }
+
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-category {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .pub-category:first-of-type {
+            margin-top: 0;
+        }
+
+        .pub-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+
+        .pub-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        .pub-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .pub-item a:hover .pub-title {
+            color: var(--accent-light);
+        }
+
+        .pub-venue {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-authors a,
+        .pub-authors a:visited,
+        .pub-authors a:hover,
+        .pub-authors a:focus,
+        .pub-authors a:active {
+            color: inherit;
+            font: inherit;
+            text-decoration: none;
+            border: none;
+            background: none;
+            cursor: text;
+        }
+
+        .pub-venue-name {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .pub-year {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Section navigation */
+        .pub-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .pub-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 0.15rem;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pub-nav a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .pub-category {
+            scroll-margin-top: 5rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-subtle);
+            background: var(--bg-subtle);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .contact {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skip Navigation */
+        .skip-nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 2px;
+            padding: 0.75rem 1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+
+        .skip-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+
+        .skip-nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            header {
+                padding: 3rem 0 2rem;
+            }
+
+            .publications {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pub-title {
+                font-size: 1.3rem;
+            }
+
+            .pub-category {
+                font-size: 1.5rem;
+            }
+
+            .pub-nav {
+                gap: 0.5rem 1.25rem;
+            }
+
+            .pub-nav a {
+                font-size: 0.78rem;
+            }
+
+            .skip-nav {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .skip-nav a {
+                font-size: 0.8rem;
+                margin: 0 0.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding-top: 4.5rem;
+            }
+        }
+
+        .talks-note {
+            margin-top: 3rem;
+            max-width: 680px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="skip-nav">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>Talks</h1>
+        </div>
+    </header>
+
+    <section class="publications">
+        <div class="container">
+            <ul class="pub-list">
+
+                <li class="pub-item">
+                    <h3 class="pub-title">The Policy and Geopolitics of Artificial Intelligence</h3>
+                    <p class="pub-venue"><span class="pub-venue-name">A technical lecture on how AI works for policymakers in Jake Sullivan’s class, Harvard Kennedy School</span>, <span class="pub-year">2026</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <h3 class="pub-title">Governing Where AI Is Going</h3>
+                    <p class="pub-venue"><span class="pub-venue-name">Guest lecture in Michael Posner’s AI &amp; Governance class, NYU Stern School of Business</span>, <span class="pub-year">2026</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.youtube.com/watch?v=JJP7OaWyetk" target="_blank" rel="noopener">
+                        <h3 class="pub-title">AI &amp; Cybersecurity: From the Situation Room to the Living Room</h3>
+                    </a>
+                    <p class="pub-authors">with Laura Galante, hosted by Michael Schulder</p>
+                    <p class="pub-venue"><span class="pub-venue-name">Wavemaker Conversations, Nantucket</span>, <span class="pub-year">2026</span></p>
+                </li>
+
+                <li class="pub-item">
+                    <a href="https://www.youtube.com/watch?v=kdR4TRAAHuY" target="_blank" rel="noopener">
+                        <h3 class="pub-title">The Other AI Race: China, Open Models, and Who Wins the World</h3>
+                    </a>
+                    <p class="pub-venue"><span class="pub-venue-name">Deacs.AI podcast, Wake Forest University</span>, <span class="pub-year">2026</span></p>
+                </li>
+            </ul>
+            <p class="talks-note">As a Coker Fellow in Tort Law, I also teach Fifth Hour to first-year students at Yale Law School once a week.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact">
+                    © 2026 Tal Feldman
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
